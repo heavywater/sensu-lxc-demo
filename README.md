@@ -11,7 +11,8 @@ combination of tools:
 
 Essentially vagrant will bootstrap a working vagabond environment and
 vagabond will bring up a cluster of LXC containers to test the sensu
-monitoring framework.
+monitoring framework. This is meant to be a vagabond playground for
+those using vagrant as well as something practical, sensu, to play with.
 
 ## Usage
 
@@ -28,14 +29,28 @@ Next `vagrant up`
 
 Followed by `vagrant ssh`
 
-`cd /vagrant` and run `vagabond up`
+`cd /vagrant` and run `vagabond` to get a list of commands
 
 We could automate this, but part of our goal is to also introduce you
 to vagabond. We think you'll like it.
 
+Experiment with the various vagabond commands and report back what
+breaks, [github issues](https://github.com/heavywater/sensu-lxc-demo/issues) are great.
+
+Note that lxc commands are run under the hood, these require root
+privileges so `sudo vagabond ...` will be needed 
+
 From here it's containers all the way down.
 
 Have fun.
+
+### A note about Vagrant
+The base box used in the Vagrantfile is Ubuntu 12.10 + Chef 11.4,
+built using the excellent [bento](http://github.com/opscode/bento)
+definitions. It's publicly hosted on s3 by Heavy Water, feel free to
+use it or substitute your own.
+
+ * [HW Ubuntu 12.10](http://vagrant.hw-ops.com/quantal64.box)
 
 ### A note about roles
 Roles are only used by the lxc containers, not the vagrant provision
