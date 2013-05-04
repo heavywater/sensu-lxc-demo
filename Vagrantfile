@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.hostname = "sensu-lxc-host"
   config.vm.box = "hw-ubuntu-12.10"
-  config.vm.box_url = "https://vagrant.hw-ops.com/quantal64.box"
+  config.vm.box_url = "http://vagrant.hw-ops.com/quantal64.box"
   config.vm.network :forwarded_port, guest: 8000, host: 8000
   config.vm.network :forwarded_port, guest: 8080, host: 8080
 
