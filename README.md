@@ -37,8 +37,7 @@ to vagabond. We think you'll like it.
 Experiment with the various vagabond commands and report back what
 breaks, [github issues](https://github.com/heavywater/sensu-lxc-demo/issues) are great.
 
-Note that lxc commands are run under the hood, these require root
-privileges so `sudo vagabond ...` will be needed 
+Note that lxc commands are run under the hood, so vagabond uses sudo to do it's thing.
 
 From here it's containers all the way down.
 
