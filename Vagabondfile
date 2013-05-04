@@ -1,0 +1,16 @@
+{
+  :nodes => {
+    :master => {
+      :template => 'ubuntu_1210',
+      :run_list => %w(role[base] role[sensu] recipe[monitor::master])
+    },
+    :client => {
+      :template => 'ubuntu_1210',
+      :run_list => %w(role[base] role[sensu])
+    }
+  },
+  :local_chef_server => {
+    :enabled => true,
+    :auto_upload => true
+  }
+}
