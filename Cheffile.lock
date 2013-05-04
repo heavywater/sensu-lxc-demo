@@ -41,7 +41,7 @@ GIT
       sensu (>= 0.0.0)
 
 PATH
-  remote: ./sensu_lxc
+  remote: ./site-cookbooks/sensu_lxc
   specs:
     sensu_lxc (0.0.1)
       apt (>= 0.0.0)
