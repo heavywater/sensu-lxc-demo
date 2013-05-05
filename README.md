@@ -1,5 +1,7 @@
 ## Sensu demo using LXC
 
+*This is at a very alpha stage currently*
+
 This repo contains a fully functioning
 [sensu](http://github.com/sensu/sensu) demo. This demo uses a
 combination of tools:
