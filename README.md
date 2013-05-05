@@ -20,7 +20,7 @@ those using vagrant as well as something practical, sensu, to play with.
 
 First off:
 
-`bundle install && bundle exec librarian-chef`
+`bundle install && bundle exec librarian-chef install`
 
 You will also need the latest version of vagrant and the
 vagrant-librarian-chef plugin. It can be installed with:
