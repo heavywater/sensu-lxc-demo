@@ -3,8 +3,15 @@
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "sensu-lxc-host"
+  config.vm.box = 'precise-64'
+  config.vm.box_url = 'https://github.com/downloads/chrisroberts/vagrant-boxes/precise-64.box'
+=begin
   config.vm.box = "hw-ubuntu-12.10"
   config.vm.box_url = "http://vagrant.hw-ops.com/quantal64.box"
+=end
+  config.vm.provision :shell do |shell|
+    shell.inline = "apt-get update\napt-get install -y -q ruby1.9.1-full git\ngem install --no-ri --no-rdoc bundler"
+  end
   config.vm.network :forwarded_port, guest: 8000, host: 8000
   config.vm.network :forwarded_port, guest: 8080, host: 8080
 
@@ -12,7 +19,7 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--cpus", "2"]
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
-
+=begin
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./cookbooks"
     chef.roles_path = "./roles"
@@ -20,4 +27,5 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "sensu_lxc"
     #chef.json = { :ruby_installer => { :method => "source"} }
   end
+=end
 end
