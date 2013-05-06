@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/chrisroberts/vagabond
-  revision: 28a4c196d9988c8cd112a7c635779e43db81bffa
+  revision: 704594a108582ba282994079edc93f5373dba43b
   branch: develop
   specs:
     vagabond (0.2.1)
