@@ -5,18 +5,13 @@ SITE
     bridger (0.0.1)
     build-essential (1.4.0)
     chef_handler (1.1.4)
+    discovery (0.2.0)
     erlang (1.2.0)
       build-essential (>= 0.0.0)
       yum (>= 0.5.0)
-    install_from (3.0.4)
     lxc (1.0.0)
-    metachef (3.0.4)
     rabbitmq (2.0.0)
       erlang (>= 0.9)
-    redis (3.0.4)
-      install_from (>= 0.0.0)
-      metachef (>= 0.0.0)
-      runit (>= 0.0.0)
     ruby_installer (0.1.2)
       build-essential (>= 0.0.0)
     runit (1.1.4)
@@ -28,9 +23,22 @@ SITE
       redis (>= 2.1.0)
       windows (>= 1.8.8)
       yum (>= 0.0.0)
+    stunnel (2.0.2)
     windows (1.8.10)
       chef_handler (>= 0.0.0)
     yum (2.2.0)
+
+GIT
+  remote: git://github.com/miah/chef-redis.git
+  ref: master
+  sha: cb8b38b6938f907c47972752dc746ed33ade1b65
+  specs:
+    redis (2.1.0)
+      build-essential (>= 0.0.0)
+      discovery (>= 0.2.0)
+      runit (>= 0.0.0)
+      stunnel (>= 2.0.0)
+      yum (>= 0.0.0)
 
 GIT
   remote: git@github.com:hw-cookbooks/monitor.git
@@ -56,6 +64,7 @@ DEPENDENCIES
   bridger (>= 0)
   lxc (>= 0)
   monitor (>= 0)
+  redis (>= 0)
   sensu (>= 0)
   sensu_lxc (>= 0)
 
