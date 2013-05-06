@@ -2,11 +2,13 @@
   :nodes => {
     :master => {
       :template => 'ubuntu_1210',
-      :run_list => %w(role[base] role[master])
+      :run_list => %w(role[base] role[master]),
+      :union => 'aufs'
     },
     :client => {
       :template => 'ubuntu_1210',
-      :run_list => %w(role[base] role[sensu])
+      :run_list => %w(role[base] role[sensu]),
+      :union => 'aufs'
     }
   },
   :clusters => {
