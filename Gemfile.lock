@@ -1,5 +1,7 @@
-PATH
-  remote: /home/spox/Projects/bitbucket/chrisroberts/vagabond
+GIT
+  remote: git://github.com/chrisroberts/vagabond
+  revision: 68f41853a7e3533d8d5dc5a02bb35d3cdb16546b
+  branch: develop
   specs:
     vagabond (0.2.1)
       chef
