@@ -46,12 +46,16 @@ $ bundle install
 Everything is now ready to build the cluster:
 
 ```
-$ vagabond cluster sensu --delay 15
+$ vagabond cluster sensu --delay 30
 ```
 
 This will take some time to run as the required base lxc instance is create and
 the chef server instance is built. If you want to see all the action as it is
 happening, add the `--debug` flag.
+
+### Dashboard
+
+* Dashboard will be available at: `http://localhost:8080`
 
 ## Available commands
 
