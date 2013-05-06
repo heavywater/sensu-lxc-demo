@@ -9,6 +9,9 @@
       :run_list => %w(role[base] role[sensu])
     }
   },
+  :clusters => {
+    :sensu => %w(master client)
+  },
   :local_chef_server => {
     :enabled => true,
     :auto_upload => true
