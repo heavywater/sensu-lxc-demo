@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "sensu-lxc-host"
-  config.vm.box = 'precise-64'
-  config.vm.box_url = 'https://github.com/downloads/chrisroberts/vagrant-boxes/precise-64.box'
+  config.vm.box = 'hw-ubuntu-12.04'
+  config.vm.box_url = 'http://vagrant.hw-ops.com/precise64.box'
 =begin
   config.vm.box = "hw-ubuntu-12.10"
   config.vm.box_url = "http://vagrant.hw-ops.com/quantal64.box"
