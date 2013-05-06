@@ -46,7 +46,7 @@ $ bundle install
 Everything is now ready to build the cluster:
 
 ```
-$ vagabond cluster sensu
+$ vagabond cluster sensu --delay 15
 ```
 
 This will take some time to run as the required base lxc instance is create and
