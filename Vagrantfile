@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://vagrant.hw-ops.com/quantal64.box"
 =end
   config.vm.provision :shell do |shell|
-    shell.inline = "apt-get update\napt-get install -y -q ruby1.9.1-full git\ngem install --no-ri --no-rdoc bundler"
+    shell.inline = "apt-get update\napt-get install -y -q ruby1.9.1-full git\ngem install --no-ri --no-rdoc bundler\niptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination 10.0.3.112:8080"
   end
   config.vm.network :forwarded_port, guest: 8000, host: 8000
   config.vm.network :forwarded_port, guest: 8080, host: 8080

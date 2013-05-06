@@ -3,6 +3,7 @@
     :master => {
       :template => 'ubuntu_1204',
       :run_list => %w(role[base] role[master]),
+      :ipaddress => '10.0.3.201',
       :union => 'aufs'
     },
     :client => {
