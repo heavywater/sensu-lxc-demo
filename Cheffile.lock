@@ -29,6 +29,14 @@ SITE
     yum (2.2.0)
 
 GIT
+  remote: git://github.com/hw-cookbooks/monitor.git
+  ref: master
+  sha: 037ecef0ebb3cc18132388b8cae6e875497a69ab
+  specs:
+    monitor (0.0.1)
+      sensu (>= 0.0.0)
+
+GIT
   remote: git://github.com/miah/chef-redis.git
   ref: master
   sha: cb8b38b6938f907c47972752dc746ed33ade1b65
@@ -39,14 +47,6 @@ GIT
       runit (>= 0.0.0)
       stunnel (>= 2.0.0)
       yum (>= 0.0.0)
-
-GIT
-  remote: git@github.com:hw-cookbooks/monitor.git
-  ref: master
-  sha: 037ecef0ebb3cc18132388b8cae6e875497a69ab
-  specs:
-    monitor (0.0.1)
-      sensu (>= 0.0.0)
 
 PATH
   remote: ./site-cookbooks/sensu_lxc
