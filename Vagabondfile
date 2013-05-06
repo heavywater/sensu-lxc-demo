@@ -2,7 +2,7 @@
   :nodes => {
     :master => {
       :template => 'ubuntu_1210',
-      :run_list => %w(role[base] role[sensu] recipe[monitor::master])
+      :run_list => %w(role[base] role[master])
     },
     :client => {
       :template => 'ubuntu_1210',
