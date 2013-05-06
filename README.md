@@ -20,16 +20,40 @@ those using vagrant as well as something practical, sensu, to play with.
 
 First off:
 
-`bundle install && bundle exec librarian-chef install`
+```
+$ bundle install && bundle exec librarian-chef install
+```
 
-You will also need the latest version of vagrant and the
-vagrant-librarian-chef plugin. It can be installed with:
+Next start up the vagrant instance:
 
-`vagrant plugin install vagrant-librarian-chef`
+```
+$ vagrant up
+```
 
-Next `vagrant up`
+and log in to the instance:
 
-Followed by `vagrant ssh`
+```
+$ vagrant ssh
+```
+
+Now we can jump to the mounted directory and load in all the vagabond bits:
+
+```
+$ cd /vagrant
+$ bundle install
+```
+
+Everything is now ready to build the cluster:
+
+```
+$ vagabond cluster sensu
+```
+
+This will take some time to run as the required base lxc instance is create and
+the chef server instance is built. If you want to see all the action as it is
+happening, add the `--debug` flag.
+
+## Available commands
 
 `cd /vagrant` and run `vagabond` to get a list of commands
 
