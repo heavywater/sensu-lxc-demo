@@ -40,13 +40,13 @@ Now we can jump to the mounted directory and load in all the vagabond bits:
 
 ```
 $ cd /vagrant
-$ bundle install
+$ bundle install --path=vendor --binstubs
 ```
 
 Everything is now ready to build the cluster:
 
 ```
-$ bundle exec vagabond cluster sensu --delay 30
+$ ./bin/vagabond cluster sensu --delay 30
 ```
 
 This will take some time to run as the required base lxc instance is create and
