@@ -15,7 +15,9 @@
   :clusters => {
     :sensu => %w(master client)
   },
+  :sudo => true,
   :local_chef_server => {
+    :zero => false,
     :enabled => true,
     :auto_upload => true
   }

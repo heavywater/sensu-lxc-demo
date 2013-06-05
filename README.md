@@ -40,16 +40,16 @@ Now we can jump to the mounted directory and load in all the vagabond bits:
 
 ```
 $ cd /vagrant
-$ bundle install
+$ bundle install --path=vendor --binstubs
 ```
 
 Everything is now ready to build the cluster:
 
 ```
-$ bundle exec vagabond cluster sensu --delay 30
+$ ./bin/vagabond cluster sensu --delay 30
 ```
 
-This will take some time to run as the required base lxc instance is create and
+This will take some time to run as the required base lxc instance is created and
 the chef server instance is built. If you want to see all the action as it is
 happening, add the `--debug` flag.
 
@@ -59,7 +59,7 @@ happening, add the `--debug` flag.
 
 ## Available commands
 
-`cd /vagrant` and run `bundle exec vagabond` to get a list of commands
+`cd /vagrant` and run `./bin/vagabond` to get a list of commands
 
 We could automate this, but part of our goal is to also introduce you
 to vagabond. We think you'll like it.
@@ -74,7 +74,13 @@ From here it's containers all the way down.
 Have fun.
 
 ### A note about Vagrant
-The base box used in the Vagrantfile is Ubuntu 12.04 + Chef 11.4,
+The base box used in the Vagrantfile is Ubuntu 12.04 with the lxc
+packages pre-installed as well as the initial cache of the Ubuntu
+12.04 files for the containers. 
+
+* [Preseed LXC](http://vagrant.hw-ops.com/precise-64-lxc-preseed.box)
+
+Base boxes are also available with Ubuntu 12.04 + Chef 11.4,
 built using the excellent [bento](http://github.com/opscode/bento)
 definitions. It's publicly hosted on s3 by Heavy Water, feel free to
 use it or substitute your own.
@@ -85,6 +91,8 @@ A 12.10 box is also available, but is currently untested
 
  * [HW Ubuntu 12.10](http://vagrant.hw-ops.com/quantal64.box)
 
+Note that provisioning these other boxes will take longer as the lxc
+packages and the initial precise cache files will have to be downloaded.
 
 ### A note about roles
 Roles are only used by the lxc containers, not the vagrant provision

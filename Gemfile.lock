@@ -1,11 +1,21 @@
 GIT
-  remote: git://github.com/chrisroberts/vagabond
-  revision: cb4f5d26208d3c946a1be27e9fa0b7ab85d39af9
+  remote: git://github.com/chrisroberts/elecksee.git
+  revision: 513fa61211fb8ebee94b44828c8741d7534218bc
+  branch: develop
+  specs:
+    elecksee (1.0.3)
+      mixlib-shellout
+      net-ssh
+
+GIT
+  remote: git://github.com/chrisroberts/vagabond.git
+  revision: cf5cbc4b6e48183b3c1f139c374877fd13735c45
   branch: develop
   specs:
     vagabond (0.2.1)
       chef
-      librarian
+      elecksee (>= 1.0.3)
+      librarian-chef
       test-kitchen (>= 1.0.0.alpha)
       thor
       uuidtools
@@ -28,7 +38,7 @@ GEM
   remote: https://www.rubygems.org/
   specs:
     archive-tar-minitar (0.5.2)
-    celluloid (0.13.0)
+    celluloid (0.14.0)
       timers (>= 1.0.0)
     chef (11.4.4)
       erubis
@@ -49,7 +59,7 @@ GEM
     coderay (1.0.9)
     erubis (2.7.0)
     ffi (1.8.1)
-    highline (1.6.18)
+    highline (1.6.19)
     i18n (0.6.4)
     ipaddress (0.8.0)
     json (1.7.7)
@@ -69,7 +79,7 @@ GEM
     mixlib-config (1.1.2)
     mixlib-log (1.6.0)
     mixlib-shellout (1.1.0)
-    net-scp (1.1.0)
+    net-scp (1.1.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)
@@ -85,16 +95,16 @@ GEM
       mixlib-shellout
       systemu
       yajl-ruby
-    pry (0.9.12.1)
+    pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     safe_yaml (0.9.1)
-    slop (3.4.4)
+    slop (3.4.5)
     systemu (2.5.2)
-    test-kitchen (1.0.0.alpha.5)
+    test-kitchen (1.0.0.alpha.7)
       celluloid
       mixlib-shellout
       net-scp
@@ -111,6 +121,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  elecksee!
   librarian-chef
   vagabond!
   vagrant!
