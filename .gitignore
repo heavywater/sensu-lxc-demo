@@ -2,3 +2,6 @@ cookbooks*
 .vagabond*
 .vagrant*
 tmp*
+bin*
+vendor*
+.bundle*
